@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### IDEA ###
+/.idea/
+
+### Other ###
+FinalExam.iml
