@@ -12,6 +12,7 @@ public class CSVReader implements Reader {
               Scanner scanner = new Scanner(new File(path))) {
 
         while (scanner.hasNextLine()) {
+
         }
       } catch (
               FileNotFoundException e) {
