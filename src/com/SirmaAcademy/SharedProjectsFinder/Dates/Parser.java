@@ -1,4 +1,4 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Dates;
 
 public interface Parser {
     public String parseData (String data);

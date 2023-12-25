@@ -1,4 +1,4 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Data;
 
 import java.time.LocalDate;
 

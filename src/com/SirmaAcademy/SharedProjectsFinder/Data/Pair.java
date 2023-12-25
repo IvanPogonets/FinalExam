@@ -1,6 +1,5 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Data;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Pair {
@@ -9,4 +8,11 @@ public class Pair {
     private Employee secondEmployee;
     private int workingTogetherTime;
     private HashMap<Integer, Integer> workingTogetherProjects; //Key - id of project, v - time which worked together
+
+    public static double createPairID (double firstId, double secondId){
+        return firstId+secondId+100000;
+    }
+
 }
+
+

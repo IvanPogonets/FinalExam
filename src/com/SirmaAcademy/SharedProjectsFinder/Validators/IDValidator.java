@@ -1,4 +1,6 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Validators;
+
+import com.SirmaAcademy.SharedProjectsFinder.Validators.Validator;
 
 public class IDValidator implements Validator {
 

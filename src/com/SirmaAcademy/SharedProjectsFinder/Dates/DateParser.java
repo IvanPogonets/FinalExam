@@ -1,10 +1,10 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Dates;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.SirmaAcademy.SharedProjectsFinder.DateFormatter.formatMonthFromChar;
-import static com.SirmaAcademy.SharedProjectsFinder.DateValidator.*;
+import static com.SirmaAcademy.SharedProjectsFinder.Dates.DateFormatter.formatMonthFromChar;
+import static com.SirmaAcademy.SharedProjectsFinder.Validators.DateValidator.*;
 
 public class DateParser {
     public String dateParser(String data) {
@@ -36,6 +36,10 @@ public class DateParser {
             day = Integer.parseInt(firstGroup);
             year = Integer.parseInt(thirdGroup);
         }
+        if (day == -1 || month == -1 || year == -1)
+            return "wrong data";
+        else if (!validateDate(day, month, year))
+            return "wrong data";
         return day + "." + month + "." + year;
     }
 }

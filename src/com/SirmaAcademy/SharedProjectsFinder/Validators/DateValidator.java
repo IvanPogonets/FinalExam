@@ -1,4 +1,6 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Validators;
+
+import com.SirmaAcademy.SharedProjectsFinder.Validators.Validator;
 
 import java.util.Calendar;
 
@@ -22,15 +24,33 @@ Then any characters until the end of the line.
         int year = Integer.parseInt(data.trim());
         return 1995 <= year && year <= currentYear;
     }
-    public static boolean validateDay (String data) {
+
+    public static boolean validateDay(String data) {
         int day = Integer.parseInt(data.trim());
         return 1 <= day && day <= 31;
     }
 
 
-    public static boolean validateMonthDigit (String data) {
+    public static boolean validateMonthDigit(String data) {
         int month = Integer.parseInt(data.trim());
         return 1 <= month && month <= 12;
+    }
+
+    public static boolean validateDate(int day, int month, int year) {
+        switch (month) {
+            case 2:
+                if (year % 4 == 0 && 1 <= day && day <= 29) {
+                    return true;
+                } else if (year % 4 != 0 && 1 <= day && day <= 28) {
+                    return true;
+                }
+                break;
+            case 4, 6, 9, 11:
+                return (1 <= day && day <= 30);
+            case 1, 3, 5, 7, 8, 10, 12:
+                return (1 <= day && day <= 31);
+        }
+        return false;
     }
 }
 

@@ -1,4 +1,7 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Dates;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class DateFormatter {
 
@@ -18,6 +21,11 @@ public class DateFormatter {
             case "декабрь", "дек", "december", "dec" -> 12;
             default -> -1;
         };
+    }
+
+    public LocalDate localDate(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        return LocalDate.parse(date, formatter);
     }
 
 }

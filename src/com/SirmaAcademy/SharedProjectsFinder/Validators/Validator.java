@@ -1,4 +1,4 @@
-package com.SirmaAcademy.SharedProjectsFinder;
+package com.SirmaAcademy.SharedProjectsFinder.Validators;
 
 public interface Validator {
     public boolean validateData (String data);
