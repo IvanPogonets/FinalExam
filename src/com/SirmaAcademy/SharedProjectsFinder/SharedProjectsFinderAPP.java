@@ -1,15 +1,17 @@
 package com.SirmaAcademy.SharedProjectsFinder;
 
+import com.SirmaAcademy.SharedProjectsFinder.Data.WorkingTimes;
+import com.SirmaAcademy.SharedProjectsFinder.ReadWrite.CSVReader;
+import com.SirmaAcademy.SharedProjectsFinder.ReadWrite.Reader;
+
 import java.util.Scanner;
 
 
 public class SharedProjectsFinderAPP {
     public static void main(String[] args) {
-WorkingTimes workingInterval = new WorkingTimes();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Write path and name of file");
-    String path = scanner.nextLine();
-    Reader reader = new CSVReader();
-    reader.read(path);
+
+
+
     }
 }
