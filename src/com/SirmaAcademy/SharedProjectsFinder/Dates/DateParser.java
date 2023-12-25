@@ -42,4 +42,8 @@ public class DateParser {
             return "wrong data";
         return day + "." + month + "." + year;
     }
+
+    public String dateParser(String data,String pattern) {
+        return null;
+    }
 }

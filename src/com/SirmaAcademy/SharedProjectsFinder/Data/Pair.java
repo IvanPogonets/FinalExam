@@ -3,7 +3,7 @@ package com.SirmaAcademy.SharedProjectsFinder.Data;
 import java.util.HashMap;
 
 public class Pair {
-    private String pairID;
+    private double pairID;
     private Employee firstEmployee;
     private Employee secondEmployee;
     private int workingTogetherTime;
@@ -13,6 +13,9 @@ public class Pair {
         return firstId+secondId+100000;
     }
 
+    public double getPairID() {
+        return pairID;
+    }
 }
 
 
