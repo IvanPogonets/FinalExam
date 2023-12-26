@@ -1,5 +1,6 @@
 package com.SirmaAcademy.SharedProjectsFinder;
 
+import com.SirmaAcademy.SharedProjectsFinder.Data.Employee;
 import com.SirmaAcademy.SharedProjectsFinder.Data.Pair;
 import com.SirmaAcademy.SharedProjectsFinder.Data.WorkingTimes;
 
@@ -9,14 +10,14 @@ import java.util.TreeSet;
 
 public class DataStorage {
     private static HashSet<WorkingTimes> workingTimes;
-    private static TreeSet<Integer> employees; // ID's of all employees
+    private static TreeSet<Employee> employees; // ID's of all employees
     private static HashMap<Double, Pair> pairs;
 
     public static HashSet<WorkingTimes> getWorkingTimes() {
         return workingTimes;
     }
 
-    public static TreeSet<Integer> getEmployees() {
+    public static TreeSet<Employee> getEmployees() {
         return employees;
     }
 
@@ -25,7 +26,7 @@ public class DataStorage {
         return pairs;
     }
 
-    public static void addEmployee(int id) {
+    public static void addEmployeeIntoSet(Employee id) {
         employees.add(id);
     }
 

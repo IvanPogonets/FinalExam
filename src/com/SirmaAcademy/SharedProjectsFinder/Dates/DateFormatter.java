@@ -23,7 +23,7 @@ public class DateFormatter {
         };
     }
 
-    public LocalDate localDate(String date) {
+    public static LocalDate localDate(String date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         return LocalDate.parse(date, formatter);
     }

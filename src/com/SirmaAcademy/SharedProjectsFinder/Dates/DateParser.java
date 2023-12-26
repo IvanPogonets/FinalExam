@@ -7,7 +7,7 @@ import static com.SirmaAcademy.SharedProjectsFinder.Dates.DateFormatter.formatMo
 import static com.SirmaAcademy.SharedProjectsFinder.Validators.DateValidator.*;
 
 public class DateParser {
-    public String dateParser(String data) {
+    public static String dateParser(String data) {
         String date = data.trim().toLowerCase();
         String regex = "\\b(\\d{1,2}|\\d{4})" +
                 "\\b[ ./-]" +
