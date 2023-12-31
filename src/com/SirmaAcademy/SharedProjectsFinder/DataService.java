@@ -1,14 +1,16 @@
 package com.SirmaAcademy.SharedProjectsFinder;
 
+import com.SirmaAcademy.SharedProjectsFinder.Data.WorkingTime;
 import com.SirmaAcademy.SharedProjectsFinder.ReadWrite.CSVReader;
 import com.SirmaAcademy.SharedProjectsFinder.ReadWrite.Reader;
 
 import java.util.Scanner;
 
 public class DataService implements Service {
+    private Reader reader;
+
     @Override
     public void readFile() {
-        Reader reader = new CSVReader();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write path and name of file");
         String path = scanner.nextLine();
@@ -17,7 +19,12 @@ public class DataService implements Service {
 //                "If you don't have it - leave field empty");
 //        String pattern = scanner.nextLine();
         reader.read(path);
-
+        if (!DataStorage.getWorkingTimes().isEmpty()) {
+            PairService.createPairs(DataStorage.getWorkingTimes());
+            PairService.fillPairs(DataStorage.getWorkingTimes());
+        } else {
+            System.out.println("There is no active projects");
+        }
     }
 
     @Override
