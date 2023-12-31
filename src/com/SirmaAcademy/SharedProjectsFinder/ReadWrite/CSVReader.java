@@ -2,7 +2,7 @@ package com.SirmaAcademy.SharedProjectsFinder.ReadWrite;
 
 import com.SirmaAcademy.SharedProjectsFinder.Data.Employee;
 import com.SirmaAcademy.SharedProjectsFinder.Data.Project;
-import com.SirmaAcademy.SharedProjectsFinder.Data.WorkingTimes;
+import com.SirmaAcademy.SharedProjectsFinder.Data.WorkingTime;
 import com.SirmaAcademy.SharedProjectsFinder.DataStorage;
 import com.SirmaAcademy.SharedProjectsFinder.Dates.DateFormatter;
 import com.SirmaAcademy.SharedProjectsFinder.Dates.DateParser;
@@ -69,7 +69,7 @@ public class CSVReader implements Reader {
                 Employee employee = new Employee(idOfEmployee);
                 DataStorage.addEmployeeIntoSet(employee);
                 Project project = new Project(idOfProject);
-                DataStorage.addWorkingTime(new WorkingTimes(employee, project, startDate, endDate));
+                DataStorage.addWorkingTime(new WorkingTime(employee, project, startDate, endDate));
                 count += 1;
             }
         } catch (
