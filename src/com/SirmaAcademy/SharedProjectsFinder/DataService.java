@@ -20,7 +20,6 @@ public class DataService implements Service {
 //        String pattern = scanner.nextLine();
         reader.read(path);
         if (!DataStorage.getWorkingTimes().isEmpty()) {
-            PairService.createPairs(DataStorage.getWorkingTimes());
             PairService.fillPairs(DataStorage.getWorkingTimes());
         } else {
             System.out.println("There is no active projects");

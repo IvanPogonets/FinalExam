@@ -10,15 +10,7 @@ import java.util.HashMap;
 
 public class PairService {
 
-    public static void createPairs(ArrayList<WorkingTime> workingTimes) {
-        Employee[] employees = DataStorage.getEmployees().toArray(new Employee[0]);
-        for (int i = 0; i < employees.length; i++) {
-            for (int j = i + 1; j < employees.length - 1; j++) {
-                double pairId = Pair.createPairID(employees[i], employees[j]);
-                DataStorage.addPair(new Pair(pairId, employees[i], employees[j]));
-            }
-        }
-    }
+
 
     public static void fillPairs(ArrayList<WorkingTime> workingTimes) {
         for (int i = 0; i < workingTimes.size() - 1; i++) {
